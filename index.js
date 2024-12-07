@@ -18,27 +18,46 @@ function getComputerChoice (string) {
     }
 }
 
-function play (getComputerChoice) {
-    
-}
-
 function getHumanChoice () {
     let humanChoice = prompt("What is your choice [Rock, Paper or Scissors]? ");
 
     if (humanChoice === 'Rock' || humanChoice === 'ROCK' || humanChoice === 'rock') {
         console.log("Rock");
+        return "Rock";
     } else if (humanChoice === 'Paper' || humanChoice === 'PAPER' || humanChoice === 'paper') {
         console.log("Paper");
+        return "Paper";
     } else if (humanChoice === 'Scissors' || humanChoice === 'SCISSORS' || humanChoice === 'scissors') {
         console.log("Scissors");
+        return "Scissors";
     } 
 
 }
 
 function playRound (getHumanChoice, getComputerChoice) {
-    
+
+    if (getHumanChoice === "Rock" && getComputerChoice === "Paper") {
+        console.log("Computer Wins.")
+    } else if (getHumanChoice === "Rock" && getComputerChoice === "Scissors") {
+        console.log("Human Wins.") 
+    } else if (getHumanChoice === "Rock" && getComputerChoice === "Rock") {
+        console.log("Draw. Play again!")
+    } else if (getHumanChoice === "Scissors" && getComputerChoice === "Paper") {
+        console.log("Human Wins.")
+    } else if (getHumanChoice === "Scissors" && getComputerChoice === "Rock") {
+        console.log("Computer Wins.")
+    } else if (getHumanChoice === "Scissors" && getComputerChoice === "Scissors") {
+        console.log("Draw. Play again!")
+    } else if (getHumanChoice === "Paper" && getComputerChoice === "Rock") {
+        console.log("Human Wins.")
+    } else if (getHumanChoice === "Paper" && getComputerChoice === "Scissors") {
+        console.log("Computer Wins.")
+    } else {
+        console.log("Draw. Play again!")
+    }
+
+
 }
 
-play();
-getComputerChoice();
+playRound();
 
