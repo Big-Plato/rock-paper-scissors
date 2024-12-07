@@ -2,6 +2,8 @@
 let humanScore = 0;
 let computerScore = 0;
 
+
+
 function getComputerChoice () {
     //Will randomly return one of the string values ("rock", "paper" and "scissors")
     let randomGuess = Math.floor(Math.random() * 3) + 1;
@@ -24,11 +26,10 @@ function getComputerChoice () {
     return randomGuess;
 }
 
-getComputerChoice();
-
 function getHumanChoice () {
+    
     let humanChoice = prompt("What is your choice [Rock, Paper or Scissors]? ");
-
+    // Making sure that there is no typo
     if (humanChoice === 'Rock' || humanChoice === 'ROCK' || humanChoice === 'rock') {
         console.log("Rock");
         return "Rock";
@@ -42,15 +43,14 @@ function getHumanChoice () {
 
 }
 
-getHumanChoice;
-
 function playRound (getHumanChoice, getComputerChoice) {
 
-    //This function will decide who wons and increase score by 1.
+    //This function will decide who wons with the other functions results and increase score by 1 
+    //depending of who wins.
 
     if (getHumanChoice === "Rock" && getComputerChoice === "Paper") {
         console.log("Computer Wins.")
-        computerScore = computerScore + 1;
+        computerScore++;
     } else if (getHumanChoice === "Rock" && getComputerChoice === "Scissors") {
         console.log("Human Wins.") 
         humanScore++;
@@ -79,5 +79,8 @@ function playRound (getHumanChoice, getComputerChoice) {
 }
 
 
-playRound(getHumanChoice, getComputerChoice);
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
 
