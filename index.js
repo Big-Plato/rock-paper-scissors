@@ -2,21 +2,29 @@
 let humanScore = 0;
 let computerScore = 0;
 
-console.log("Hello, World!");
-
-function getComputerChoice (string) {
+function getComputerChoice () {
     //Will randomly return one of the string values ("rock", "paper" and "scissors")
     let randomGuess = Math.floor(Math.random() * 3) + 1;
     console.log(randomGuess);
-    return randomGuess;
     if (randomGuess === 1) {
+        console.log("I'm random guess: " + randomGuess);
         console.log("Rock");
+        randomGuess = "Rock";
     } else if (randomGuess === 2) {
-        console.log("Paper");
-    } else if (randomGuess === 3) {
+        console.log("I1m random guesser: " + randomGuess);
+        console.log("Paper")
+        randomGuess = "Paper";
+    } else {
+        console.log(randomGuess);
         console.log("Scissors");
+        randomGuess = "Scissors";
     }
+
+
+    return randomGuess;
 }
+
+getComputerChoice();
 
 function getHumanChoice () {
     let humanChoice = prompt("What is your choice [Rock, Paper or Scissors]? ");
@@ -34,30 +42,42 @@ function getHumanChoice () {
 
 }
 
+getHumanChoice;
+
 function playRound (getHumanChoice, getComputerChoice) {
+
+    //This function will decide who wons and increase score by 1.
 
     if (getHumanChoice === "Rock" && getComputerChoice === "Paper") {
         console.log("Computer Wins.")
+        computerScore = computerScore + 1;
     } else if (getHumanChoice === "Rock" && getComputerChoice === "Scissors") {
         console.log("Human Wins.") 
+        humanScore++;
     } else if (getHumanChoice === "Rock" && getComputerChoice === "Rock") {
         console.log("Draw. Play again!")
     } else if (getHumanChoice === "Scissors" && getComputerChoice === "Paper") {
         console.log("Human Wins.")
+        humanScore++;
     } else if (getHumanChoice === "Scissors" && getComputerChoice === "Rock") {
         console.log("Computer Wins.")
+        computerScore++;
     } else if (getHumanChoice === "Scissors" && getComputerChoice === "Scissors") {
-        console.log("Draw. Play again!")
+        console.log("Draw. Play again!");
     } else if (getHumanChoice === "Paper" && getComputerChoice === "Rock") {
-        console.log("Human Wins.")
+        console.log("Human Wins.");
+        humanScore++;
     } else if (getHumanChoice === "Paper" && getComputerChoice === "Scissors") {
-        console.log("Computer Wins.")
-    } else {
-        console.log("Draw. Play again!")
+        console.log("Computer Wins.");
+        computerScore++;
+    } else if (getHumanChoice === "Paper" && getComputerChoice === "Paper") {
+        console.log("Draw. Play again!");
     }
 
-
+    console.log("Human Score: " + humanScore);
+    console.log("Computer Score: " + computerScore);
 }
 
-playRound();
+
+playRound(getHumanChoice, getComputerChoice);
 
