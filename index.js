@@ -5,10 +5,10 @@ let computerScore = 0;
 
 
 function getComputerChoice () {
-    //Will randomly return one of the string values ("rock", "paper" and "scissors")
+    // Will randomly return one of the string values ("rock" = 1, "paper" = 2 and "scissors" = 3)
     let randomGuess = Math.floor(Math.random() * 3) + 1;
 
-    //if random number is one of the numbers below turn the value of variable to the name of the move
+    // Random number will determine what output will be
     if (randomGuess === 1) {
         console.log("Rock");
         randomGuess = "Rock";
@@ -24,19 +24,14 @@ function getComputerChoice () {
 
 function getHumanChoice () {
     
+    // Formatting the text after the input, so the user could write the way he wants
     let humanChoice = prompt("What is your choice [Rock, Paper or Scissors]? ");
+    let capitalize = humanChoice.slice(0,1).toUpperCase();
+    let rest = humanChoice.slice(1, humanChoice.length);
+    humanChoice = capitalize + rest.toLowerCase();  
 
-    // Making sure that there is no typo
-    if (humanChoice === 'Rock' || humanChoice === 'ROCK' || humanChoice === 'rock') {
-        console.log("Rock");
-        return "Rock";
-    } else if (humanChoice === 'Paper' || humanChoice === 'PAPER' || humanChoice === 'paper') {
-        console.log("Paper");
-        return "Paper";
-    } else if (humanChoice === 'Scissors' || humanChoice === 'SCISSORS' || humanChoice === 'scissors') {
-        console.log("Scissors");
-        return "Scissors";
-    } 
+    console.log(humanChoice);
+    return humanChoice;
 }
 
 function playRound (getHumanChoice, getComputerChoice) {
@@ -86,6 +81,7 @@ function playRound (getHumanChoice, getComputerChoice) {
         break;
     }
 
+    // Returning the actual score
     console.log("Human Score is: " + humanScore);
     console.log("Computer Score is: " + computerScore);
 
@@ -94,7 +90,7 @@ function playRound (getHumanChoice, getComputerChoice) {
 
 // Iterating over five times through the acquaintance of the results of computer and asking for user's input
 function playFiveRounds () {
-    for (let i = 0; i <= 5; i++) {
+    for (let i = 0; i < 5; i++) {
         const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
 
@@ -110,7 +106,7 @@ function playFiveRounds () {
     } else if (humanScore < computerScore) {
         console.log("Sheesh, you lose to Plato");
     } else {
-        console.log("We have a draw, But there is no place for a draw here. Let's flipcoin");
+        console.log("We have a draw, But there is no place for a draw here. Let's flipcoin!!");
         let flipCoin = Math.floor(Math.random() * 2);
 
         if (flipCoin === 1) {
