@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div id="rps-div">
+            <div class="hand">
+                <h2>ROCK</h2>
+                <div class="rps">
+                    <img src="./assets/img/noun-fist-hand.svg" alt="hand closed representing rock">
+                </div>
+                <button id="Rock" data-name="Rock" class="btn rock">Choose Rock</button>
+            </div>
+
+            <div class="hand">
+                <h2>PAPER</h2>
+                <div class="rps">
+                    <img src="./assets/img/noun-five-fingers.svg" alt="open hand representing paper">
+                </div>
+                <button id="Paper" data-name="Paper" class="btn paper">Choose Paper</button>
+            </div>
+
+            <div class="hand">
+                <h2>SCISSORS</h2>
+                <div class="rps">
+                    <img src="./assets/img/noun-two-fingers.svg" alt="hand with two fingers up representing scissors">
+                </div>
+                <button id="Scissors" data-name="Scissors" class="btn scissors">Choose Scissors</button>
+            </div>
+        </div>
+        <div id="result">
+            <p id="humanScore"></p>
+            <p id="computerScore"></p>
+        </div>
+        <p id="message"></p>
+    </div>
 
 
 
