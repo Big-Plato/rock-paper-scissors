@@ -1,0 +1,47 @@
+[33mcommit b9e510c6ab14236474d42ad572fb2a8ed1020bb5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/rps-ui[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mrps-ui[m[33m)[m
+Author: Big-Plato <luisoctavius.sc@gmail.com>
+Date:   Sun Dec 8 21:59:58 2024 -0300
+
+    Improve the function getHumanChoice
+
+[33mcommit b08b2902e7fd232abd848824784a209e0a009856[m
+Author: Big-Plato <luisoctavius.sc@gmail.com>
+Date:   Sun Dec 8 20:48:38 2024 -0300
+
+    Change the if statements for a switch in plaRound function
+
+[33mcommit cf2495c457ca1886e0b6140b44bc00ba84f8352e[m
+Author: Big-Plato <luisoctavius.sc@gmail.com>
+Date:   Sat Dec 7 20:57:20 2024 -0300
+
+    The game works now. Add 5 rounds
+
+[33mcommit fb3ab01e965aa2b6a0f94fb2ab00a53cfa00b3ae[m
+Author: Big-Plato <luisoctavius.sc@gmail.com>
+Date:   Sat Dec 7 03:27:12 2024 -0300
+
+    Modify the functions but did not work again
+
+[33mcommit 5ef1b56b4a5f120c11e672240f77e8084990721e[m
+Author: Big-Plato <luisoctavius.sc@gmail.com>
+Date:   Sat Dec 7 03:10:08 2024 -0300
+
+    Try to make the game work but it didn't
+
+[33mcommit c213547632e2e6b8d3832ab88de1442fa7000684[m
+Author: Big-Plato <luisoctavius.sc@gmail.com>
+Date:   Sat Dec 7 02:48:19 2024 -0300
+
+    Add the function that play a round
+
+[33mcommit b2467aabce9cecf994fddec44fc3e53ef1bcd2aa[m
+Author: Big-Plato <luisoctavius.sc@gmail.com>
+Date:   Sat Dec 7 01:07:16 2024 -0300
+
+    Add index.js and functions in it
+
+[33mcommit 9416186d37a51113ed4537af519524e00734077b[m
+Author: Big-Plato <luisoctavius.sc@gmail.com>
+Date:   Fri Dec 6 23:07:18 2024 -0300
+
+    Create the index.html

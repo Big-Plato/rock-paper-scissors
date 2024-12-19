@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(227, 84, 240);
+}
+
+.container {
+    position: absolute;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 500px;
+
+}
+#rps-div {
+    display: flex;
+    align-items: space-around;
+    justify-content: space-around;
+    gap: 100px;
+}
+
+#result {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.rps {
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+}
+
+.hand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+img {
+    padding: 5px;
+}
+
+#message {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    color: white;
+}
+
+.btn {
+    width: 200px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 5px;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+
+}
+
+.btn.rock {
+    background-color: rgb(207, 96, 96);
+}
+
+.btn.paper {
+    background-color: white;
+}
+
+.btn.scissors {
+    background-color: silver;   
+}
