@@ -14,7 +14,7 @@ let computerScoreResult = document.querySelector("#computerScore");
 let container = document.querySelector(".container");
 let msg = document.querySelector("#message");
 
-game = () => {
+const game = () => {
   // The buttons, when selected, will get the string based on the id of the button in HTML
   rockPaperScissors.forEach((hand) => {
     hand.addEventListener("click", (e) => {
@@ -68,9 +68,10 @@ game = () => {
             break;
 
           default:
-            msg.textContent = "Draw. Play Again";
-        }
+            msg.textContent = "Draw. Play Again!";
 
+          return;
+        }
         // let selection = document.createElement("p");
         // container.appendChild(selection);
         // selection.setAttribute("style", "color: white; font-size: 1.5rem;");
@@ -80,33 +81,32 @@ game = () => {
         computerScoreResult.textContent = `Computer Score is: ${computerScore}.`;
         console.log("Human Score is: " + humanScore);
         console.log("Computer Score is: " + computerScore);
+      };
 
+      gameOver(humanScore, computerScore);
+
+      function gameOver(humanScore, computerScore) {
         let finalResult = document.createElement("button");
         finalResult.classList.add(".btn");
 
-        function reloadPage() {
-          window.location.reload();
+        if (humanScore === 5 && humanScore > computerScore) {
+          msg.textContent = "The game is over. You win!";
+          container.appendChild(finalResult);
+          finalResult.textContent = "Reload game?";
+          finalResult.addEventListener("click", reloadPage);
+          return;
+        } else if (computerScore === 5 && computerScore > humanScore) {
+          msg.textContent = "The game is over. You lose :(";
+          container.appendChild(finalResult);
+          finalResult.textContent = "Reload game?";
+          finalResult.addEventListener("click", reloadPage);
+          return;
         }
+      }
 
-        //Verify the score and end game
-
-        switch (true) {
-          case humanScore === 5:
-            msg.textContent = "The game is over. You win!";
-            container.appendChild(finalResult);
-            finalResult.textContent = "Reload game?";
-            finalResult.addEventListener("click", reloadPage);
-            break;
-          case computerScore === 5:
-            msg.textContent = "The game is over. You lose :(";
-            container.appendChild(finalResult);
-            finalResult.textContent = "Reload game?";
-            finalResult.addEventListener("click", reloadPage);
-            break;
-        }
-      };
-
-      
+      function reloadPage() {
+        window.location.reload();
+      }
       // Call function to play the game
       playRound(playerSelection, getComputerChoice);
     });
