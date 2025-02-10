@@ -1,9 +1,21 @@
+* {
+  box-sizing: border-box;
+  font-family: monospace;
+
+}
+
+:root {
+    --main-bg-color: rgb(255, 242, 242);
+    --main-border-color: rgb(45, 51, 107);
+    --main-button-color: rgb(120, 134, 199);
+    --main-font-color: rgb(169, 181, 223);
+}
 body {
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(227, 84, 240);
+    padding: 0;
+    background-color: var(--main-bg-color);
+    overflow: hidden;
+    
 }
 
 .container {
@@ -13,26 +25,37 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
-    height: 500px;
-
+    width: 100vw;
+    height: 100vh;
 }
+
 #rps-div {
     display: flex;
-    align-items: space-around;
+    align-items: center;
     justify-content: space-around;
     gap: 100px;
+    width: 80%;
+    height: 500px;
+    margin: auto;
 }
 
 #result {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    width: 50%;
+    height: 10%;
     gap: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
+
+#result p {
+    font-weight: bolder;
+    font-size: 1.6rem;
+}
 .rps {
-    border: 2px solid black;
+    border: 2px solid var(--main-border-color);
     width: 200px;
     height: 200px;
 }
@@ -53,30 +76,37 @@ img {
 }
 
 #message {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: monospace;
     font-size: 2rem;
-    color: white;
+    color: var(--main-border-color);
 }
 
 .btn {
     width: 200px;
+    height: 50px;
     font-size: 1.2rem;
     border-radius: 10px;
     padding: 5px;
-    color: black;
+    color: navy;
+    --webkit-text-stroke: 4px white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     cursor: pointer;
-
 }
 
-.btn.rock {
-    background-color: rgb(207, 96, 96);
+#reload {
+    border: none;
+    background-color: var(--main-button-color);
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 10px;
 }
 
-.btn.paper {
-    background-color: white;
+.btn:hover, #reload:hover {
+    background-color: var(--main-font-color);
 }
 
-.btn.scissors {
-    background-color: silver;   
+.btn:active {
+    transform: translateY(-4px);
+    transition: ease-in-out;
 }
